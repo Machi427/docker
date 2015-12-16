@@ -1,0 +1,21 @@
+#サービス有効化(centos7)
+systemctl enable docker.service
+#サービス起動(centos7)
+systemctl start docker.service
+#サービス停止
+systemctl stop docker.service
+#ステータス
+systemctl status docker.service
+#イメージ検索
+docker search [レポジトリ名]
+#イメージを引っ張ってくる
+docker pull
+#イメージ一覧
+docker images
+# コンテナを名前を付けて起動
+docker run -it --name centos01 enakai00/centos:centos6 /bin/bash
+#起動中のコンテナの中に入る
+docker attach [イメージ名]
+#コミット（イメージ作成）する 
+docker commit centos01 machi427/httpd:ver1.0
+
